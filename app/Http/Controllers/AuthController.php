@@ -25,12 +25,13 @@ class AuthController extends Controller
         if (Auth::attempt($request->only('email', 'password')))
         {
             // Redirect to the intended page or default to the dashboard
+            // return redirect()->intended(route('dashboard'));
             return redirect()->intended(route('dashboard'));
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.'
-        ]);
+        return back()->with('error', 'The provided credentials do not match our records.');
+
+        
     }
 
     // Method for logout
@@ -42,7 +43,7 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
     
-        return redirect('/login')->with('status', 'Anda telah berhasil logout!');
+        return redirect('/')->with('status', 'Anda telah berhasil logout!');
     }
     
 }

@@ -18,18 +18,43 @@
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
+    <style>
+        /* Styling untuk tautan Login */
+        .login-link {
+            color: #1ABC9C !important; /* Warna hijau untuk teks */
+            font-weight: bold;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        /* Memberikan jarak ikon dan teks */
+        .login-link i {
+            margin-right: 8px;
+        }
+    
+        /* Efek Hover */
+        .login-link:hover {
+            background-color: #1ABC9C !important; 
+            color: #ffffff !important;
+            border-radius: 5px;
+        }
+    </style>
+        
     <!-- vendor css -->
     <link rel="stylesheet" href="assets/css/style.css">
-
     <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-<script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
 
-    
+{{-- library leaflet.js untuk me load data shapefile .zip --}}
+<script src="https://unpkg.com/shpjs@latest/dist/shp.min.js"></script>
+
+
 
 </head>
 <body class="">
